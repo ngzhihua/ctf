@@ -1,0 +1,6 @@
+TCP hijacking
+
+install shijack:
+wget "https://dl.packetstormsecurity.net/sniffers/shijack.tgz"
+
+

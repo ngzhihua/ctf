@@ -1,0 +1,16 @@
+John the ripper usage example:
+
+Get a copy of password file:
+unmask 077
+unshadow /etc/passwd /etc/shadow > mypasswd
+
+Crack:
+john mypasswd
+
+Show passwords if cracked:
+john —show mypasswd
+
+To display the root account only:
+john —show —users=root mypasswd
+
+http://www.openwall.com/john/doc/EXAMPLES.shtml

